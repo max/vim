@@ -1,11 +1,7 @@
-set runtimepath+=/usr/local/opt/fzf
+packadd minpac
 
-command! PackUpdate packadd minpac | source $MYVIMRC | redraw | call minpac#update()
-command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
-
-if !exists('*minpac#init')
-  finish
-endif
+" TODO: Add fzf back
+" set runtimepath+=/usr/local/opt/fzf
 
 call minpac#init({'verbose': 0})
 
@@ -19,7 +15,8 @@ call minpac#add('tpope/vim-sensible')
 call minpac#add('tpope/vim-surround')
 
 " file browsing
-call minpac#add('junegunn/fzf.vim')
+" TODO: Add fzf back
+" call minpac#add('junegunn/fzf.vim')
 call minpac#add('scrooloose/nerdtree')
 
 " colorschemes
@@ -33,15 +30,21 @@ call minpac#add('airblade/vim-gitgutter')
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('tpope/vim-rhubarb')
 
-"autocomplete
-call minpac#add('Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'})
+" autocomplete
+" TODO: Add deoplete bac
+" call minpac#add('Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'})
 
 " languages
-call minpac#add('fatih/vim-go')
-call minpac#add('zchee/deoplete-go', {'do': 'make'})
+" TODO: Add vim-go bac
+" call minpac#add('fatih/vim-go')
+" TODO: Add deoplete-go bac
+" call minpac#add('zchee/deoplete-go', {'do': 'make'})
 call minpac#add('hashivim/vim-terraform')
 call minpac#add('pangloss/vim-javascript')
-call minpac#add('prettier/vim-prettier', {'do': 'yarn install'})
-call minpac#add('flowtype/vim-flow')
+" TODO: Add vim-prettier back
+" call minpac#add('prettier/vim-prettier', {'do': 'yarn install'})
+" TODO: Add vim-flow back
+" call minpac#add('flowtype/vim-flow')
 
-set runtimepath+=/usr/local/opt/fzf
+" TODO: Add fzf back
+" set runtimepath+=/usr/local/opt/fzf
