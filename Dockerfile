@@ -15,4 +15,6 @@ RUN apt-get install -y git-core && \
 
 RUN nvim --headless -c "call minpac#update('', {'do': 'quitall'})"
 
-CMD ["nvim"]
+WORKDIR /workspace
+
+ENTRYPOINT ["nvim"]
